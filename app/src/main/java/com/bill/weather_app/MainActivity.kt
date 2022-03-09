@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
             .enqueue(object : retrofit2.Callback<WeatherInfo> {
                 override fun onFailure(call: Call<WeatherInfo>, t: Throwable) {
                     Log.e("Get data fail", t.message.toString())
+
                 }
 
                 override fun onResponse(call: Call<WeatherInfo>, response: Response<WeatherInfo>) {
